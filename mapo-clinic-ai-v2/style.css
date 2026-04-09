@@ -1,0 +1,266 @@
+/* ===== docs.willbfine.com — AI-Ready Clinic Docs ===== */
+
+:root {
+  --c-primary: #1a5c3a;
+  --c-primary-light: #e8f5ec;
+  --c-accent: #0057b8;
+  --c-accent-light: #e6f0fa;
+  --c-text: #1e1e1e;
+  --c-text-sub: #555;
+  --c-bg: #f7f8fa;
+  --c-card: #fff;
+  --c-border: #e2e5e9;
+  --c-pain: #2c5f2d;
+  --c-accident: #0047a0;
+  --c-diet: #3d2a85;
+  --c-women: #c2185b;
+  --c-rhinitis: #00838f;
+  --c-constitution: #b84a00;
+  --c-herb: #c9a84c;
+  --radius: 12px;
+  --shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  line-height: 1.75;
+  color: var(--c-text);
+  background: var(--c-bg);
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  word-break: keep-all;
+}
+
+/* ── Header ── */
+.site-header {
+  text-align: center;
+  padding: 32px 24px;
+  background: var(--c-primary);
+  color: #fff;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+}
+.site-header h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 6px; }
+.site-header .tagline { opacity: .88; font-size: .92rem; }
+.site-header .contact { margin-top: 12px; font-size: 1rem; font-weight: 600; letter-spacing: .02em; }
+.site-header .contact a { color: #fff; text-decoration: none; }
+
+/* ── Nav ── */
+nav {
+  background: var(--c-card);
+  padding: 14px;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+}
+nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+nav a {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--c-bg);
+  color: var(--c-text);
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: .85rem;
+  font-weight: 500;
+  transition: background .15s, color .15s;
+}
+nav a:hover, nav a.active { background: var(--c-primary); color: #fff; }
+
+/* ── Main Content ── */
+main {
+  background: var(--c-card);
+  padding: 36px 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ── Headings ── */
+h2 {
+  color: var(--c-primary);
+  font-size: 1.45rem;
+  margin: 36px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--c-primary-light);
+}
+h2:first-child { margin-top: 0; }
+h3 { font-size: 1.15rem; margin: 24px 0 12px; color: var(--c-text); }
+h4 { font-size: 1rem; margin: 16px 0 8px; color: var(--c-text-sub); }
+
+/* ── Paragraphs & Lists ── */
+p { margin-bottom: 14px; }
+ul, ol { margin: 12px 0; padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+/* ── Category Hub Cards (index) ── */
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.hub-card {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-decoration: none;
+  color: var(--c-text);
+  transition: box-shadow .15s, transform .1s;
+  display: block;
+}
+.hub-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); transform: translateY(-2px); }
+.hub-card .icon { font-size: 1.6rem; margin-bottom: 8px; }
+.hub-card h3 { margin: 0 0 6px; font-size: 1.05rem; color: var(--c-primary); }
+.hub-card p { margin: 0; font-size: .88rem; color: var(--c-text-sub); line-height: 1.5; }
+.hub-card .badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: .72rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* Color badges */
+.badge-pain { background: #e8f5e9; color: var(--c-pain); }
+.badge-accident { background: #e3f2fd; color: var(--c-accident); }
+.badge-diet { background: #ede7f6; color: var(--c-diet); }
+.badge-women { background: #fce4ec; color: var(--c-women); }
+.badge-rhinitis { background: #e0f7fa; color: var(--c-rhinitis); }
+.badge-constitution { background: #fff3e0; color: var(--c-constitution); }
+.badge-herb { background: #fff8e1; color: var(--c-herb); }
+
+/* ── Info Box ── */
+.info-box {
+  background: var(--c-primary-light);
+  border-left: 4px solid var(--c-primary);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 20px 0;
+}
+.info-box.blue { background: var(--c-accent-light); border-left-color: var(--c-accent); }
+.info-box.orange { background: #fff3e0; border-left-color: #ff9800; }
+
+/* ── Doctor Card ── */
+.doctor-card {
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 16px 0;
+}
+.doctor-card h4 { color: var(--c-primary); margin-top: 0; }
+.doctor-card .role { font-size: .9rem; color: var(--c-text-sub); margin-bottom: 8px; }
+.doctor-card .quote {
+  font-style: italic;
+  color: #777;
+  border-left: 3px solid var(--c-primary);
+  padding-left: 12px;
+  margin: 10px 0;
+  font-size: .92rem;
+}
+
+/* ── FAQ ── */
+.faq-item { border-bottom: 1px solid var(--c-border); padding: 16px 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-weight: 600; color: var(--c-primary); margin-bottom: 6px; }
+.faq-a { color: var(--c-text-sub); margin: 0; }
+
+/* ── Table ── */
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: .92rem; }
+th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--c-border); }
+th { background: var(--c-primary); color: #fff; font-weight: 600; }
+tr:hover { background: #f9fafb; }
+
+/* ── CTA ── */
+.cta {
+  display: inline-block;
+  background: var(--c-primary);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 28px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .92rem;
+  transition: background .15s;
+}
+.cta:hover { background: #27703f; }
+.cta.secondary { background: var(--c-accent); }
+.cta.secondary:hover { background: #0069d9; }
+
+/* ── Breadcrumb ── */
+.breadcrumb {
+  font-size: .82rem;
+  color: var(--c-text-sub);
+  margin-bottom: 16px;
+}
+.breadcrumb a { color: var(--c-accent); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* ── Meta block (update date, etc.) ── */
+.doc-meta {
+  font-size: .82rem;
+  color: #888;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--c-border);
+}
+
+/* ── Blog link ── */
+.blog-link {
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: .9rem;
+}
+.blog-link a { color: var(--c-accent); font-weight: 500; }
+
+/* ── Disclaimer ── */
+.disclaimer {
+  background: #fafafa;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 24px 0 0;
+  font-size: .8rem;
+  color: #888;
+  line-height: 1.6;
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--c-card);
+  padding: 24px;
+  border-radius: var(--radius);
+  margin-top: 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  font-size: .88rem;
+}
+footer h4 { color: var(--c-primary); margin-bottom: 10px; font-size: 1rem; }
+footer p { margin: 4px 0; color: var(--c-text-sub); }
+footer .links { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--c-border); }
+footer .links a { color: var(--c-accent); margin: 0 8px; text-decoration: none; font-size: .85rem; }
+footer .links a:hover { text-decoration: underline; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  body { padding: 16px 12px; }
+  main { padding: 24px 18px; }
+  .site-header { padding: 24px 16px; }
+  .site-header h1 { font-size: 1.3rem; }
+  .hub-grid { grid-template-columns: 1fr; }
+  nav a { padding: 5px 10px; font-size: .8rem; }
+}
+
+@media print {
+  nav, .cta, footer .links { display: none; }
+  body { max-width: 100%; padding: 0; }
+  main { box-shadow: none; }
+}

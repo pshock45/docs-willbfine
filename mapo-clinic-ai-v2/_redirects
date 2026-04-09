@@ -1,0 +1,15 @@
+# Netlify _redirects — 기존 URL에서 새 구조로 리다이렉트
+/pain-clinic.html       /pain/              301
+/chuna.html             /pain/              301
+/traffic-accident.html  /traffic-accident/  301
+/diet.html              /diet/              301
+/womens-clinic.html     /women/             301
+/rhinitis.html          /rhinitis-immunity/ 301
+/constitution-clinic.html /constitution/    301
+/herbal-medicine.html   /herbal-medicine/   301
+/herbal-injection.html  /pain/              301
+/acupuncture.html       /pain/              301
+/insurance-guide.html   /faq/               301
+/diagnosis.html         /clinic-info/       301
+/english.html           /en/                301
+/index.html             /                   301

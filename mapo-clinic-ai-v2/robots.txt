@@ -1,0 +1,46 @@
+# robots.txt — docs.willbfine.com
+# AI-Ready Clinic Docs for 괜찮아요한의원
+# Last updated: 2026-04-09
+
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://docs.willbfine.com/sitemap.xml
+
+# AI 크롤러 허용
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# 검색엔진 크롤러
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yeti
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Daumoa
+Allow: /
+Crawl-delay: 1
