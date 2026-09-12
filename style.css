@@ -249,6 +249,11 @@ footer .links { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(-
 footer .links a { color: var(--c-accent); margin: 0 8px; text-decoration: none; font-size: .85rem; }
 footer .links a:hover { text-decoration: underline; }
 
+/* Keep long evidence URLs inside the reading column on small screens. */
+main a,
+main li,
+main p { overflow-wrap: anywhere; word-break: break-word; }
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   body { padding: 16px 12px; }
